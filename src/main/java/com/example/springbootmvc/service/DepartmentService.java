@@ -24,11 +24,9 @@ public class DepartmentService {
         Optional<Company> optionalCompany = companyRepository.findById(departmentDTO.getCompanyId());
         if (optionalCompany.isEmpty()) return new ApiResponse("Akaajon bunaqa id yoq", false);
         Company company = optionalCompany.get();
-
         Department department = new Department();
         department.setName(departmentDTO.getName());
         department.setCompany(company);
-
         Department save = departmentRepository.save(department);
         return new ApiResponse("Saved", true, save);
     }
