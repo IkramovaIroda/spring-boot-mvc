@@ -34,39 +34,53 @@
 <!--</form>-->
 <!--</body>-->
 <!--</html>-->
-<!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-<h1>Employee Edit Page</h1>
 
-<form method="post" th:action="@{/employee/edit/{id}(id=${employee.getId()})}" th:object="${employee}">
-    <div class="form-group">
 
-        <label for="fullname">FullName</label>
-        <input th:field="*{name}" name="filename" type="text" class="form-control" id="fullname"
-               placeholder=" Fullname kirit">
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="https://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Employee Edit Page</h1>-->
+
+<!--<form method="post" th:action="@{/employee/edit/{id}(id=${employee.getId()})}" th:object="${employee}">-->
+<!--    <div class="form-group">-->
+
+<!--        <label for="fullname">FullName</label>-->
+<!--        <input th:field="*{name}" name="filename" type="text" class="form-control" id="fullname"-->
+<!--               placeholder=" Fullname kirit">-->
+
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label> Company </label>-->
+<!--        <div>-->
+<!--            <select name="companyId">-->
+<!--                <option th:each="company : ${companyList}"-->
+<!--                        th:text="${company.name}"-->
+<!--                        th:value="${company.id}">-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-primary">Update!</button>-->
+
+<!--</form>-->
+<!--</body>-->
+
+
+
+
+
+
+
+
 
 <!--        <label for="phone">Phone</label>-->
 <!--        <input th:field="*{phone}" name="phone" type="text" class="form-control" id="phone"-->
 <!--               placeholder="Phone kirit">-->
-    </div>
-    <div>
-        <label> Company </label>
-        <div>
-            <select name="companyId">
-                <option th:each="company : ${companyList}"
-                        th:text="${company.name}"
-                        th:value="${company.id}">
-            </select>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Update!</button>
-
-</form>
-</body>
